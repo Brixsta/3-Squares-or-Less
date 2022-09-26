@@ -15,8 +15,8 @@ let game = {
   mouseX: 0,
   mouseY: 0,
   deltaTime: 0,
-  theme: new Audio("./theme.wav"),
-  lost: new Audio("./lost.wav"),
+  theme: new Audio("audio/theme.wav"),
+  lost: new Audio("audio/lost.wav"),
 };
 
 window.onload = () => {
@@ -68,7 +68,7 @@ const startGame = () => {
         game.mouseY < square.y + square.height &&
         game.mouseY > square.y
       ) {
-        const laser = new Audio("./laser.wav");
+        const laser = new Audio("audio/laser.wav");
 
         if (square.color === "white") {
           laser.pause();
